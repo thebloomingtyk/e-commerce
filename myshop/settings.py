@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'parler',
+    'rosetta',
     'debug_toolbar',
 ]
 
@@ -117,7 +118,7 @@ LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
     ('en', _('English')),
-    ('es', _('Spanish')),
+    ('sw', _('Kiswahili')),
 ]
 
 LOCALE_PATHS = [
@@ -151,14 +152,11 @@ CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
-
-
 # django-parler settings
 PARLER_LANGUAGES = {
     None: (
         {'code': 'en'},
-        {'code': 'es'},
+        {'code': 'sw'},
     ),
     'default': {
         'fallback': 'en',

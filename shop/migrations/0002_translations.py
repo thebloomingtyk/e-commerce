@@ -28,6 +28,7 @@ class Migration(migrations.Migration):
                 'managed': True,
                 'default_permissions': (),
             },
+            # bases=(parler.models.TranslatableModel, models.Model),
             bases=(parler.models.TranslatableModel, models.Model),
         ),
         migrations.CreateModel(
@@ -46,6 +47,7 @@ class Migration(migrations.Migration):
                 'managed': True,
                 'default_permissions': (),
             },
+            # bases=(parler.models.TranslatableModel, models.Model),
             bases=(parler.models.TranslatableModel, models.Model),
         ),
         migrations.AlterModelOptions(
