@@ -1,0 +1,9 @@
+check the categories active,
+
+orders and pdfs in the backends
+
+
+context_processors
+
+messages.success(request, 'Your order has been successfully completed.')
+            return redirect('shop:product_list')

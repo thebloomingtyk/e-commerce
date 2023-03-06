@@ -12,6 +12,19 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
+import env
+import os
+
+from django.contrib.messages import constants as messages
+
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-secondary',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+ }
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,12 +40,15 @@ SECRET_KEY = 'django-insecure-7_nsrot785&(%clx#=s@dop!k1z*^6wxfwh#r(c=#crs_6h5bh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,8 +60,11 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'parler',
     'rosetta',
+    'crispy_forms',
     'debug_toolbar',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
@@ -114,11 +133,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'sw'
 
 LANGUAGES = [
-    ('en', _('English')),
     ('sw', _('Kiswahili')),
+    ('en', _('English')),
 ]
 
 LOCALE_PATHS = [
@@ -149,8 +168,15 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 CART_SESSION_ID = 'cart'
 
+EMAIL_BACKEND = env.EMAIL_BACKEND
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = env.EMAIL_HOST
+EMAIL_PORT = env.EMAIL_PORT
+EMAIL_USE_TLS = env.EMAIL_USE_TLS
+EMAIL_HOST_USER = env.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = env.EMAIL_HOST_PASSWORD
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # django-parler settings
 PARLER_LANGUAGES = {
@@ -168,3 +194,7 @@ PARLER_LANGUAGES = {
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]

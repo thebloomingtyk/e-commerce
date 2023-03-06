@@ -8,6 +8,7 @@ import weasyprint
 from .models import OrderItem, Order
 from .forms import OrderCreateForm
 from cart.cart import Cart
+from django.contrib import messages
 
 
 def order_create(request):
@@ -23,9 +24,12 @@ def order_create(request):
                                          quantity=item['quantity'])
             # clear the cart
             cart.clear()
-            return render(request,
-                          'orders/order/created.html',
-                          {'order': order})
+            # messages.info(request, 'You can wait a little bit while your order is being processed.')
+            # return render(request,
+            #               'orders/order/created.html',
+            #               {'order': order})
+            messages.success(request, 'Your order has been successfully completed.')
+            return redirect('shop:product_list')
     else:
         form = OrderCreateForm()
     return render(request,

@@ -1,0 +1,55 @@
+Date: 17/1/2023
+Time: 14:5
+Phone Number: +255621898042
+Message: Python is good
+--------------------
+Date: 17/1/2023
+Time: 14:15
+Phone Number: +255621898042
+Message: Python is good
+--------------------
+Date: 17/1/2023
+Time: 14:19
+Phone Number: +255621898042
+Message: Kegemba Hubert made an order. Phone number: 0784545454 Address: Home
+--------------------
+Date: 17/1/2023
+Time: 14:31
+Phone Number: +255621898042
+Message: Yute Manyage made an order. Phone number: 0784545454 Address: Home
+--------------------
+Date: 17/1/2023
+Time: 14:32
+Phone Number: +255621898042
+Message: Yute Juy made an order. Phone number: 0784545454 Address: Home
+--------------------
+Date: 17/1/2023
+Time: 14:37
+Phone Number: +255754661191
+Message: firstnamee name made an order. Phone number: 0784545454 Address: Home
+--------------------
+Date: 17/1/2023
+Time: 17:47
+Phone Number: +255754661191
+Message: Mwapolo Manyage made an order. Phone number: 2284545454 Address: Home
+--------------------
+Date: 17/1/2023
+Time: 17:56
+Phone Number: +255754661191
+Message: firstname name made an order. Phone number: 0784545454 Address: Home
+--------------------
+Date: 17/1/2023
+Time: 18:0
+Phone Number: +255754661191
+Message: firstname name made an order. Phone number: 0784545454 Address: Home
+--------------------
+Date: 17/1/2023
+Time: 18:7
+Phone Number: +255754661191
+Message: Yute Manyage made an order. Phone number: 0784545454 Address: Home
+--------------------
+Date: 17/1/2023
+Time: 18:26
+Phone Number: +255754661191
+Message: Mwapolo Manyage made an order. Phone number: 2284545454 Address: Home
+--------------------

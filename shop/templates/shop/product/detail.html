@@ -6,7 +6,80 @@
   {{ product.name }}
 {% endblock %}
 {% block content %}
-  <div class="product-detail">
+
+<!-- <div class="card-group">
+  <div class="card">
+    <a href="{{ product.get_absolute_url }}">
+    <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="Card image cap">
+  </a>
+    <div class="card-body"> -->
+      <!-- <h5 class="card-title">Card title</h5> -->
+      <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+      <!-- <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+      <p class="card-text"><small class="text-muted"></small></p>
+      Tsh{{ product.price }}/=
+    </div>
+  </div> -->
+
+
+  <div class="card">
+    <img src="{% if product.image %}{{ product.image.url }}{% else %}
+    {% static "img/no_image.png" %}{% endif %}" style="width:100%">
+    <h1>{{ product.name }}</h1>
+    <h2>
+      <a href="{{ product.category.get_absolute_url }}">
+        {{ product.category }}
+      </a>
+    </h2>
+    <p>{{ product.description|linebreaks }}</p>
+    <p class="price">Tsh{{ product.price }}/=</p>
+    <form action="{% url "cart:cart_add" product.id %}" method="post">
+      {{ cart_product_form }}
+      {% csrf_token %}
+      <!-- <input type="submit" value="{% trans "Add to cart" %}"> -->
+      <p><button style="background-color: #5a93bb;" type="submit">{% trans "Add to cart" %}</button></p>
+    </form>
+  </div>
+
+
+  <style>
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+  </style>
+
+
+
+
+
+
+
+  <!-- <div class="product-detail">
     <img src="{% if product.image %}{{ product.image.url }}{% else %}
     {% static "img/no_image.png" %}{% endif %}">
     <h1>{{ product.name }}</h1>
@@ -21,7 +94,22 @@
       {% csrf_token %}
       <input type="submit" value="{% trans "Add to cart" %}">
     </form>
-    {{ product.description|linebreaks }}
+    {{ product.description|linebreaks }} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     {% if recommended_products %}
       <div class="recommendations">

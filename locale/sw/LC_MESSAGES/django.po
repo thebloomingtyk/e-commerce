@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-05 18:57+0300\n"
-"PO-Revision-Date: 2022-12-05 15:55+0000\n"
+"POT-Creation-Date: 2022-12-08 19:26+0300\n"
+"PO-Revision-Date: 2022-12-08 16:32+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -29,8 +29,6 @@ msgid "Image"
 msgstr "Picha"
 
 #: cart/templates/cart/detail.html:13
-#, fuzzy
-#| msgid "Products"
 msgid "Product"
 msgstr "Bidhaa"
 
@@ -42,29 +40,29 @@ msgstr "@bei"
 msgid "Price"
 msgstr "Bei"
 
-#: cart/templates/cart/detail.html:34
-msgid "Update"
-msgstr "Badili"
-
-#: cart/templates/cart/detail.html:41
-msgid "Remove"
-msgstr "Ondoa"
-
-#: cart/templates/cart/detail.html:51
+#: cart/templates/cart/detail.html:17 cart/templates/cart/detail.html:52
 msgid "Total"
 msgstr "Jumla"
 
-#: cart/templates/cart/detail.html:59
-msgid "Continue shopping"
-msgstr "Endelea kukusanya"
+#: cart/templates/cart/detail.html:35
+msgid "Update"
+msgstr "Badili"
+
+#: cart/templates/cart/detail.html:42
+msgid "Remove"
+msgstr "Ondoa"
 
 #: cart/templates/cart/detail.html:60
+msgid "Continue shopping"
+msgstr "Endelea kununua"
+
+#: cart/templates/cart/detail.html:61
 msgid "Checkout"
 msgstr "Agiza"
 
 #: env/lib/python3.8/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
-msgstr "Ujumbe"
+msgstr ""
 
 #: env/lib/python3.8/site-packages/django/contrib/sitemaps/apps.py:8
 msgid "Site Maps"
@@ -121,8 +119,8 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/core/validators.py:264
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/core/validators.py:276
@@ -318,15 +316,15 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1458
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1466
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1471
@@ -345,8 +343,8 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1754
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1758
@@ -501,7 +499,8 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: env/lib/python3.8/site-packages/django/forms/boundfield.py:176
 msgid ":?.!"
 msgstr ""
@@ -551,7 +550,8 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/fields.py:622
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -659,7 +659,8 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/models.py:1435
-msgid "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/forms/models.py:1574
@@ -1119,11 +1120,11 @@ msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/csrf.py:127
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/csrf.py:136
@@ -1174,8 +1175,8 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/views/generic/dates.py:652
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/generic/dates.py:692
@@ -1231,10 +1232,10 @@ msgstr ""
 #: env/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:222
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
 
 #: env/lib/python3.8/site-packages/django/views/templates/default_urlconf.html:230
@@ -1262,12 +1263,12 @@ msgid "Connect, get help, or contribute"
 msgstr ""
 
 #: myshop/settings.py:120
-msgid "English"
-msgstr "Kiingereza"
-
-#: myshop/settings.py:121
 msgid "Kiswahili"
 msgstr "Kiswahili"
+
+#: myshop/settings.py:121
+msgid "English"
+msgstr "Kiingereza"
 
 #: myshop/urls.py:25
 msgid "cart/"
@@ -1279,7 +1280,7 @@ msgstr "oda/"
 
 #: shop/templates/shop/base.html:7 shop/templates/shop/base.html:12
 msgid "My shop"
-msgstr "Duka langu"
+msgstr "Duka"
 
 #: shop/templates/shop/base.html:17
 msgid "Language"
@@ -1287,7 +1288,7 @@ msgstr "Lugha"
 
 #: shop/templates/shop/base.html:35
 msgid "Your cart"
-msgstr "Mkokoteni wako"
+msgstr "kokoteni yako"
 
 #: shop/templates/shop/base.html:37
 #, python-format
@@ -1304,15 +1305,15 @@ msgstr[1] ""
 
 #: shop/templates/shop/base.html:44
 msgid "Your cart is empty."
-msgstr "Hujaweka kitu kwenye mkokoteni"
+msgstr "kokoteni iko empty"
 
 #: shop/templates/shop/product/detail.html:22
 msgid "Add to cart"
-msgstr "Ongeza kwenye mkokoteni"
+msgstr "Ongeza kwa kokoteni"
 
 #: shop/templates/shop/product/detail.html:28
 msgid "People who bought this also bought"
-msgstr "Bidhaa pia watu wamenunua"
+msgstr ""
 
 #: shop/templates/shop/product/list.html:6
 #: shop/templates/shop/product/list.html:24
@@ -1325,4 +1326,4 @@ msgstr "Aina za bidhaa"
 
 #: shop/templates/shop/product/list.html:14
 msgid "All"
-msgstr "Bidhaa zote"
+msgstr "Zote"

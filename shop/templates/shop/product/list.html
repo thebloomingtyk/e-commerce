@@ -7,30 +7,136 @@
 {% endblock %}
 
 {% block content %}
-  <div id="sidebar">
-    <h3>{% trans "Categories" %}</h3>
+
+
+<div class="topnav">
+  <!-- <h3>{% trans "Categories" %}:</h3> -->
+  <!-- <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a> -->
+
+
+  <!-- <ul> -->
+    
+    <!-- <span {% if not category %}class="active"{% endif %}>
+      <a href="{% url "shop:product_list" %}">{% trans "All" %}</a>
+    </span> -->
+    <!-- {% for c in categories %}
+      <span {% if category.slug == c.slug %}class="active"{% endif %}>
+        <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+      </span>
+    {% endfor %} -->
+    <!-- <br>
+    <br>
+    <br> -->
+    <span>
+      <a style="color: black;" {% if not category %}class="active"{% endif %} href="{% url "shop:product_list" %}">{% trans "All" %}</a>
+    </span>
+    {% for c in categories %}
+    <span class="topnav">
+      <a style="color: black;" {% if category.slug == c.slug %}class="active"{% endif %} href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+    </span>
+    {% endfor %}
+  <!-- </ul> -->
+
+</div>
+
+<style>
+/* .x-navbar-wrap .x-navbar {
+    max-width: 1300px;
+    margin: 0 auto;
+    border-radius: 0 0 40px 40px;
+} */
+
+  .topnav {
+    /* color: black; */
+    max-width: 1300px;
+    margin: 0 auto;
+    border-radius: 10px 10px 10px 10px;
+    background-color: inherit;
+  /* background-color: rgb(0, 119, 111); */
+  overflow: hidden;
+  /* border-radius: 5%; */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  /* background-color: #04AA6D; */
+  color: white;
+  background:#5993bb;
+}
+</style>
+
+  <div class="container" id="sidebar">
+    <!-- <h3>{% trans "Categories" %}</h3> -->
     <ul>
-      <li {% if not category %}class="selected"{% endif %}>
-        <a href="{% url "shop:product_list" %}">{% trans "All" %}</a>
-      </li>
-      {% for c in categories %}
-        <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+      <!-- <li {% if not category %}class="active"{% endif %}> -->
+        <!-- <a href="{% url "shop:product_list" %}">{% trans "All" %}</a> -->
+      <!-- </li> -->
+      <!-- {% for c in categories %}
+        <li {% if category.slug == c.slug %}class="active"{% endif %}>
           <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
         </li>
-      {% endfor %}
+      {% endfor %} -->
     </ul>
   </div>
-  <div id="main" class="product-list">
-    <h1>{% if category %}{{ category.name }}{% else %}{% trans "Products" %}{% endif %}</h1>
+  
+  {% for message in messages %}
+  <div class="container-fluid p-0">
+    <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="True">&times;</span>
+      </button>
+      {{ message }}
+    </div>
+  </div>
+  {% endfor %}
+
+  <div  class="text-center">
+    <h3>{% if category %}{{ category.name }}{% else %}{% trans "All Products" %}{% endif %}</h3>
     {% for product in products %}
-      <div class="item">
+      <!-- <div class="item">
         <a href="{{ product.get_absolute_url }}">
-          <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+          <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' width="5" height="6" %}{% endif %}">
         </a>
         <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
         <br>
         Tsh{{ product.price }}/=
-      </div>
+      </div> -->
+
+
+      <div class="card-group">
+        <div class="card">
+          <a href="{{ product.get_absolute_url }}">
+          <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="Card image cap" width="300" height="300">
+        </a>
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+            <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+            <p class="card-text"><small class="text-muted"></small></p>
+            Tsh{{ product.price }}/=
+          </div>
+        </div>
+
+
+
     {% endfor %}
-  </div>
 {% endblock %}

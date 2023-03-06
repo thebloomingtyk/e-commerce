@@ -20,8 +20,13 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
 
+admin.site.site_header = 'The Afric Group'
+admin.site.site_title = 'TheAfricGroup.com'
+admin.site.index_title = 'We sell value'
+
+
 urlpatterns = i18n_patterns(
-    path('admin/', admin.site.urls),
+    path('derick/', admin.site.urls),
     path(_('cart/'), include('cart.urls', namespace='cart')),
     path(_('orders/'), include('orders.urls', namespace='orders')),
     path('rosetta/', include('rosetta.urls')),
